@@ -1,0 +1,115 @@
+{
+  "seed": 42,
+  "fast_run": false,
+  "dataset_file": "diabetes_binary_health_indicators_BRFSS2015.csv",
+  "raw_rows": 253680,
+  "raw_columns": 22,
+  "rows_after_cleaning": 229474,
+  "drop_duplicates": true,
+  "target": "Diabetes_binary",
+  "n_classes": 2,
+  "class_distribution_after_cleaning": {
+    "No diabetes": 194377,
+    "Diabetes": 35097
+  },
+  "split": {
+    "train": 160631,
+    "validation": 34421,
+    "test": 34422,
+    "stratified": true
+  },
+  "feature_set_selected": "base + engineered",
+  "n_features": 29,
+  "tuning": {
+    "method": "RandomizedSearchCV",
+    "scoring": "roc_auc",
+    "cv_folds": 3,
+    "n_iter": 6,
+    "tune_sample_rows": 50000,
+    "svm_train_rows": 20000
+  },
+  "best_params_traditional": {
+    "Logistic Regression": {
+      "C": 0.0745934328572655
+    },
+    "Random Forest": {
+      "n_estimators": 100,
+      "min_samples_leaf": 20,
+      "max_features": "sqrt",
+      "max_depth": 12
+    },
+    "HistGradientBoosting": {
+      "l2_regularization": 1.5212112147976886,
+      "learning_rate": 0.08283072221077194,
+      "max_iter": 100,
+      "max_leaf_nodes": 15,
+      "min_samples_leaf": 100
+    },
+    "SVM (RBF)": {
+      "C": 0.5,
+      "kernel": "rbf",
+      "train_subsample": 20000
+    }
+  },
+  "nn_configs": [
+    {
+      "name": "NN-A: [128,64] baseline",
+      "hidden": [
+        128,
+        64
+      ],
+      "dropout": 0.3,
+      "lr": 0.001,
+      "l2": 1e-05,
+      "batch": 512
+    },
+    {
+      "name": "NN-B: [256,128,64] wider/deeper",
+      "hidden": [
+        256,
+        128,
+        64
+      ],
+      "dropout": 0.3,
+      "lr": 0.001,
+      "l2": 1e-05,
+      "batch": 512
+    },
+    {
+      "name": "NN-C: [128,64] dropout 0.5, lr 3e-4",
+      "hidden": [
+        128,
+        64
+      ],
+      "dropout": 0.5,
+      "lr": 0.0003,
+      "l2": 0.0001,
+      "batch": 512
+    },
+    {
+      "name": "NN-D: [128,64,32] batch 2048, lr 3e-3",
+      "hidden": [
+        128,
+        64,
+        32
+      ],
+      "dropout": 0.3,
+      "lr": 0.003,
+      "l2": 1e-05,
+      "batch": 2048
+    }
+  ],
+  "nn_max_epochs": 40,
+  "nn_early_stopping_patience": 5,
+  "selected_traditional_model": "HistGradientBoosting",
+  "selected_neural_network": "NN-B: [256,128,64] wider/deeper",
+  "best_overall_on_validation": "Neural Network (NN-B)",
+  "thresholds_from_validation": {
+    "Logistic Regression": 0.6,
+    "Random Forest": 0.62,
+    "HistGradientBoosting": 0.6399999999999999,
+    "SVM (RBF)": 0.6399999999999999,
+    "Neural Network (NN-B)": 0.6599999999999999
+  },
+  "selection_metric": "validation roc_auc"
+}

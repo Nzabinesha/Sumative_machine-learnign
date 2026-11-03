@@ -1,0 +1,5 @@
+Feature set,n_features,Model,Val ROC-AUC,Fit time (s)
+base,21,Logistic Regression,0.8126215643889132,0.8
+base,21,HistGradientBoosting,0.8192950277936666,2.7
+base + engineered,29,Logistic Regression,0.8159771793579942,1.2
+base + engineered,29,HistGradientBoosting,0.8194275478327008,2.5
