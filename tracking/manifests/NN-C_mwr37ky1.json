@@ -1,0 +1,12 @@
+{
+  "Model": "NN-C",
+  "W&B Run ID": "mwr37ky1",
+  "W&B Directory": "/content/drive/MyDrive/Diabetes_Classification_Project/tracking/wandb/wandb/offline-run-20261103_051535-mwr37ky1",
+  "TensorBoard Directory": "/content/drive/MyDrive/Diabetes_Classification_Project/tracking/tensorboard/NN-C",
+  "History CSV": "/content/drive/MyDrive/Diabetes_Classification_Project/tracking/manifests/NN-C_mwr37ky1_history.csv",
+  "Validation ROC-AUC": 0.8191561519790198,
+  "Training Time (s)": 93.67909622192383,
+  "Epochs": 34,
+  "Status": "completed",
+  "Timestamp UTC": "2026-11-03T05:17:11.609761+00:00"
+}

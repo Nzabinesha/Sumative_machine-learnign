@@ -1,0 +1,7 @@
+{
+  "target_column": "Diabetes_binary",
+  "class_index_to_name": {
+    "0": "No diabetes",
+    "1": "Diabetes"
+  }
+}

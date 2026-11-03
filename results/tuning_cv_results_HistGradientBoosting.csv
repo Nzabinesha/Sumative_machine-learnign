@@ -1,0 +1,7 @@
+rank_test_score,mean_test_score,std_test_score,params
+1,0.8151804421188791,0.0027928035114491183,"{'model__l2_regularization': np.float64(1.5212112147976886), 'model__learning_rate': np.float64(0.08283072221077194), 'model__max_iter': 100, 'model__max_leaf_nodes': 15, 'model__min_samples_leaf': 100}"
+2,0.8147638895619053,0.002742514748116873,"{'model__l2_regularization': np.float64(3.0592644736118975), 'model__learning_rate': np.float64(0.029180149047462245), 'model__max_iter': 300, 'model__max_leaf_nodes': 31, 'model__min_samples_leaf': 50}"
+3,0.8143872821863606,0.002880955855350304,"{'model__l2_regularization': np.float64(3.005575058716044), 'model__learning_rate': np.float64(0.13607801490147406), 'model__max_iter': 200, 'model__max_leaf_nodes': 15, 'model__min_samples_leaf': 50}"
+4,0.8139512274103292,0.001967197638169497,"{'model__l2_regularization': np.float64(3.609993861334124), 'model__learning_rate': np.float64(0.25401164843545776), 'model__max_iter': 200, 'model__max_leaf_nodes': 15, 'model__min_samples_leaf': 20}"
+5,0.813347994398229,0.0025041156827513475,"{'model__l2_regularization': np.float64(1.8727005942368125), 'model__learning_rate': np.float64(0.262516606324193), 'model__max_iter': 300, 'model__max_leaf_nodes': 15, 'model__min_samples_leaf': 20}"
+6,0.8125530439292584,0.002696551123253446,"{'model__l2_regularization': np.float64(0.7800932022121826), 'model__learning_rate': np.float64(0.03051362379613698), 'model__max_iter': 300, 'model__max_leaf_nodes': 63, 'model__min_samples_leaf': 20}"
